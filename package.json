@@ -1,0 +1,15 @@
+{
+  "name": "Facebook Cache Cleanup",
+  "version": "1.0.0",
+  "description": "Forces Facebook to scrape the pages again",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["Facebook", "Scrape", "Cache"],
+  "author": "Santiago Carmo",
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.83.0"
+  }
+}
