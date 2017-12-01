@@ -32,7 +32,7 @@ Force the Facebook to scrape a page again
     $ ./rescrape -u https://yoursite.com/sitemap.xml -t sitemap -f only-urls-with-this
     # will re-scrape just urls like https://yoursite.com/only-urls-with-this
 
-### Or Mybe you'd like to replace part of the url
+### Or maybe you'd like to replace part of the url
 
     # eg replacing part of url
     ./rescrape -u https://yoursite.com/sitemap.xml -t sitemap -f only-urls-with-this -g http:\/\/www -r https://mx
