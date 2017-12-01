@@ -1,21 +1,26 @@
 {
-  "name": "Facebook Cache Cleanup",
+  "name": "facebook-re-scrape",
   "version": "1.0.0",
-  "description": "Forces Facebook to scrape the pages again",
-  "main": "app.js",
+  "description": "Forces Facebook to re-scrape the pages",
+  "main": "rescrape",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:godfather/facebook-force-scrape.git"
   },
   "keywords": [
     "Facebook",
     "Scrape",
     "Cache"
   ],
-  "author": "Santiago Carmo",
+  "author": "Santiago Carmo <santiagocca@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "commander": "^2.12.2",
     "request": "^2.83.0",
-    "request-promise": "^4.2.2"
+    "request-promise": "^4.2.2",
+    "xml2js": "^0.4.19"
   }
 }
