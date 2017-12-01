@@ -1,0 +1,41 @@
+"use strict";
+const request   = require('request-promise');
+const commander = require('commander');
+
+let url     = "";
+let replace = "";
+let regex   = "";
+let type    = "";
+let filter  = "";
+
+const run = async () => {
+  const url = escape("http://cl.tuhistory.com/hoy-en-la-historia/himmler-comienza-experimentar-con-prisioneros-de-un-campo-de-concentracion");
+  const facebookScrapeUrl = 'https://graph.facebook.com/';
+  const token = "EAABlQNZBNQJEBAI1KXndE37rmTn7GEiIt8NuMmgF2zWGpWJyWtKFKfodOjf5fsYv8UYb25ZA5DnK5YTcj5bNMJrVAKGOYpI0W1CGOvBCiH7fwdKdZB8tFTigafw3wMAedMgQNegCcsAihe5k6npoS5KkIZA5DosNbcpg9gRLCFEZBGZA6TuFsJ7WyhEYWZCQ2oZD";
+
+  try {
+    let response = await request.post(facebookScrapeUrl + '?id=' + url + '&scrape=true&access_token=' + token );
+    // console.log(response);
+    console.dir(JSON.parse(response), {depth: null, colors: true})
+  } catch(err) {
+    console.log(err);
+  }
+}
+
+commander
+  .version('0.1.0')
+  .usage('[options] <file ...>')
+  .option('-t, --type [type]', 'The type of url that will be processed can be "sitemap" or "url". Default is URL')
+  .option('-u, --url <url>', 'The Url to be processed')
+  .option('-r, --replace [replace]', 'A regex to replace some value')
+  .option('-g, --regex   [regexp]', 'The value to be replaced')
+  .option('-f, --filter  [filter]', 'Filter urls from a sitemap by this filter value')
+.parse(process.argv);
+
+if(commander.helpme || commander.args.length === 0) commander.help();
+
+
+
+
+
+// run();
