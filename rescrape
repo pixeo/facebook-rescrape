@@ -5,6 +5,7 @@ const request   = require('request-promise');
 const commander = require('commander');
 const parser    = require('xml2json');
 const fs        = require('fs');
+const pkg       = require(__dirname + '/package.json');
 
 const FACEBOOK_SCRAPE_URL = 'https://graph.facebook.com/';
 const ACCESS_TOKEN        = "111329302888593|7M-qgi4Fu7PXV8OF3jLbytwn2WY";
@@ -102,7 +103,7 @@ const run = async () => {
 }
 
 commander
-  .version('0.1.0')
+  .version(pkg.version)
   .usage('[options] <file ...>')
   .option('-t, --type <type>', 'The type of url that will be processed can be "sitemap" or "url"', /^(sitemap|url)$/i, 'url')
   .option('-u, --url <url>', 'The Url to be processed')
