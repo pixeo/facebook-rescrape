@@ -1,4 +1,9 @@
-# facebook-force-scrape
+# Facebook Rescrape
+
+### Install
+    npm install -g facebook-rescrape
+
+##Usage
 Force the Facebook to scrape a page again
 
     ./rescrape -h
