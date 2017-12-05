@@ -57,10 +57,16 @@ const run = async () => {
   let total = urls.length;
 
   const interval = () => {
-    console.info('WAITING FOR 30 SECONDS TO AVOID OVERLOAD…');
+    let timer = 0;
+    
+    if(commander.type != 'url') {
+      timer = 30000;
+      console.info('WAITING FOR 30 SECONDS TO AVOID OVERLOAD…');
+    }
     
     setTimeout(async () => {
-      for(currentUrlIndex; currentUrlIndex < (lastCalledIndex + 30); currentUrlIndex++) {
+      let count = commander.type == 'url' ? 1 : (lastCalledIndex + 30);
+      for(currentUrlIndex; currentUrlIndex < count; currentUrlIndex++) {
         console.log("PROCESSING URL " + (currentUrlIndex + 1) + " FROM " + total);
 
       
@@ -89,7 +95,7 @@ const run = async () => {
       
       interval();
 
-    }, 30000);
+    }, timer);
   }
   
   interval();
