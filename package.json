@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com:godfather/facebook-force-scrape.git"
+    "url": "git+ssh://git@github.com:godfather/facebook-rescrape.git"
   },
   "keywords": [
     "Facebook",
