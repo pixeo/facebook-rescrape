@@ -1,6 +1,6 @@
 {
   "name": "facebook-re-scrape",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Forces Facebook to re-scrape the pages",
   "main": "rescrape",
   "scripts": {
