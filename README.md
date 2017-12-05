@@ -1,12 +1,12 @@
 # Facebook Rescrape
 
 ### Install
-    npm install -g facebook-rescrape
+    $ npm install -g facebook-rescrape
 
 ### Usage
 Force the Facebook to scrape a page again
 
-    ./rescrape -h
+    $ rescrape -h
 
     Usage: rescrape [options] <file ...>
 
@@ -25,22 +25,22 @@ Force the Facebook to scrape a page again
 ### You can re-scrape a single url or a sitemap
 
     # eg for a single url:
-    $ ./rescrape -u http://yoursite.com/url-path/if-exists
+    $ rescrape -u http://yoursite.com/url-path/if-exists
     
     # eg for a site map
-    $ ./rescrape -u https://yoursite.com/sitemap.xml -t sitemap
+    $ rescrape -u https://yoursite.com/sitemap.xml -t sitemap
     
 
 ### Some times you'd like to filter the sitemap by urls with a pattern
 
     # eg filtering a url by pattern
-    $ ./rescrape -u https://yoursite.com/sitemap.xml -t sitemap -f only-urls-with-this
+    $ rescrape -u https://yoursite.com/sitemap.xml -t sitemap -f only-urls-with-this
     # will re-scrape just urls like https://yoursite.com/only-urls-with-this
 
 ### Or maybe you'd like to replace part of the url
 
     # eg replacing part of url
-    ./rescrape -u https://yoursite.com/sitemap.xml -t sitemap -f only-urls-with-this -g http:\/\/www -r https://mx
+    $ rescrape -u https://yoursite.com/sitemap.xml -t sitemap -f only-urls-with-this -g http:\/\/www -r https://mx
     # the http://www will be replaced by https://mx
 
 
