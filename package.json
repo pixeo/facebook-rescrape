@@ -1,29 +1,30 @@
 {
-  "name": "facebook-rescrape",
-  "version": "1.0.5",
-  "description": "Forces Facebook to re-scrape the pages",
-  "main": "rescrape",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "bin": {
-    "rescrape": "./rescrape"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com:godfather/facebook-rescrape.git"
-  },
-  "keywords": [
-    "Facebook",
-    "Scrape",
-    "Cache"
-  ],
-  "author": "Santiago Carmo <santiagocca@gmail.com>",
-  "license": "ISC",
-  "dependencies": {
-    "commander": "^2.12.2",
-    "request": "^2.83.0",
-    "request-promise": "^4.2.2",
-    "xml2json": "^0.11.0"
-  }
+    "name": "facebook-rescrape",
+    "version": "1.0.5",
+    "description": "Forces Facebook to re-scrape the pages",
+    "main": "rescrape.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "bin": {
+        "rescrape": "./rescrape"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com:godfather/facebook-rescrape.git"
+    },
+    "keywords": [
+        "Facebook",
+        "Scrape",
+        "Cache"
+    ],
+    "author": "Santiago Carmo <santiagocca@gmail.com>",
+    "license": "ISC",
+    "dependencies": {
+        "commander": "^2.12.2",
+        "dotenv": "^4.0.0",
+        "request": "^2.83.0",
+        "request-promise": "^4.2.2",
+        "xml2json": "^0.11.0"
+    }
 }
